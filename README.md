@@ -1,2 +1,2 @@
-# tag-selector
-This jquery plugin aim to  to find tags easily from API or another Service; 
+# ranking-plugin
+Current jquery plugin have produced to rank any stuffs(like a post, product ...).
