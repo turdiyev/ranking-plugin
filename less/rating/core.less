@@ -1,0 +1,43 @@
+// Base Class Definition
+// -------------------------
+
+.col {
+  width: 49%;
+  float: left;
+  & + .col {
+    float: right;
+  }
+}
+
+.rating-box {
+  display: inline-block;
+  vertical-align: top;
+  ul {
+    .set-padding-margin();
+    li {
+      background: #A7A9AC;
+      color: #ffffff;
+      display: inline-block;
+      vertical-align: top;
+      .set-border-radius();
+      .set-padding-margin(0, 3px 5px);
+
+      &.hovered {
+        background: #FCD404;
+      }
+    }
+  }
+
+  .info {
+    color: #3c3c3c;
+    font-size: 0.8em;
+    &.min {
+
+    }
+    &.max {
+      float: right;
+    }
+  }
+}
+
+

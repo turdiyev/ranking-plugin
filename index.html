@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Query.uz ga xush kelibsiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link rel="stylesheet/less" type="text/css" href="less/font-awesome/font-awesome.less"/>-->
+    <!--<link rel="stylesheet/less" type="text/css" href="less/rating/main.less"/>-->
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css"/>
+    <link rel="stylesheet" type="text/css" href="css/rating.css"/>
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <!--<script src="js/less.min.js"></script>-->
+    <script src="js/rating.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#ratingBox").rating({
+                activeIndex: 3,
+                complete: function (index) {
+                    $("[name=rate], [name=rank]").val(index);
+                },
+                load: function (index) {
+                    $("[name=rate], [name=rank]").val(index);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="col">
+    <h1>Rate (jquery plugin)</h1>
+
+    <div id="ratingBox" class="additional"></div>
+    <input name="rate" type="hidden"/>
+    <input type="text" name="rank"/>
+</div>
+<div class="col">
+    <h1>HTML structure</h1>
+
+    <div class="rating-box">
+        <ul>
+            <li><i class="fa fa-star"></i></li>
+            <li><i class="fa fa-star"></i></li>
+            <li><i class="fa fa-star"></i></li>
+            <li><i class="fa fa-star"></i></li>
+            <li><i class="fa fa-star"></i></li>
+        </ul>
+        <div class="footer">
+            <span class="info min">Bad</span>
+            <span class="info max">Great</span>
+        </div>
+    </div>
+</div>
+</body>
+</html>
