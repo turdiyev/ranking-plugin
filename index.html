@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Query.uz ga xush kelibsiz</title>
+    <title>Postlarni, Productlarni rating qilish uchun jquery plugin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--<link rel="stylesheet/less" type="text/css" href="less/font-awesome/font-awesome.less"/>-->
     <!--<link rel="stylesheet/less" type="text/css" href="less/rating/main.less"/>-->
@@ -14,7 +14,6 @@
     <script>
         $(document).ready(function () {
             $("#ratingBox").rating({
-                activeIndex: 3,
                 complete: function (index) {
                     $("[name=rate], [name=rank]").val(index);
                 },

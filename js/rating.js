@@ -60,7 +60,7 @@ $(document).ready(function () {
             },
 
             attachHandlers: function () {
-                var lastIndex = R.activeIndex, hoverIndex = 0;
+                var lastIndex = R.activeIndex, hoverIndex = -1;
                 R.dom.list.find("li:gt(" + (lastIndex) + ")").removeClass("hovered");
                 R.dom.list.find("li:lt(" + (lastIndex + 1) + ")").addClass("hovered");
 
@@ -165,7 +165,7 @@ $(document).ready(function () {
         minString: "Bad",
         maxString: "Great",
 
-        activeIndex: -1,
+        activeIndex: 0,
         innerItem: "<i class='fa fa-star'></i>",
         complete: null,//function
         load: null,//function
